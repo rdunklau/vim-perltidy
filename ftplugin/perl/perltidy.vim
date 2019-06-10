@@ -34,6 +34,7 @@ function!s:PerlTidy()
     call setpos(".", prevcur)
     call setpos("'x", prevx)
     call setpos("'y", prevy)
+    set nopaste
 endfunction
 
 command! -nargs=* -range -bang PerlTidy <line1>,<line2>call s:PerlTidy()
